@@ -1,0 +1,23 @@
+name: Build helper
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - run: python scripts/audit-public-tree.py
+      - run: python scripts/bootstrap-sdk.py
+      - run: python scripts/build.py --unsigned
+      - uses: actions/upload-artifact@v4
+        with:
+          name: duokan-night-unsigned
+          path: build/duokan-night-unsigned.apk

@@ -1,0 +1,28 @@
+# Generated artifacts and local-only dependencies.
+build/
+.local/
+*.class
+*.dex
+*.odex
+*.vdex
+*.oat
+*.smali
+*.apk
+*.aab
+*.pk8
+*.jks
+*.keystore
+*.pem
+*.p12
+*.pfx
+*.zip
+*.log
+.env*
+local.properties
+__pycache__/
+# Never import private analysis or user data.
+originals/
+decoded/
+jadx/
+reports/
+usb_driver/
