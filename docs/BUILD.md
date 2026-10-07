@@ -9,3 +9,5 @@ bootstrap-sdk.py 从 Google 官方 SDK 下载两个固定版本归档并检查�
 build.py 只使用本项目源码、公开 Android API 与自己的图标资源；不需要读取或拉取原厂 APK。默认签名目标为兼容表中已验证的证书。不要将未知签名的辅助包当作兼容结果。
 
 GitHub Actions 只构建未签名 APK，并检查公开文件范围；正式安装包由维护者在本地签名、检查后发布。
+
+SDK selection: by default the build uses the verified SDK subset downloaded by bootstrap-sdk.py into .local/android-sdk. To use a separately prepared SDK, pass --sdk explicitly. Runner ANDROID_SDK_ROOT does not override the verified local subset.

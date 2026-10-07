@@ -10,7 +10,7 @@ EXPECTED_CERT = "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--sdk", type=Path, default=Path(os.environ.get("ANDROID_SDK_ROOT", ROOT / ".local/android-sdk")))
+    parser.add_argument("--sdk", type=Path, default=ROOT / ".local/android-sdk")
     parser.add_argument("--build-tools", default="28.0.3")
     parser.add_argument("--unsigned", action="store_true")
     parser.add_argument("--signing-key", type=Path)
