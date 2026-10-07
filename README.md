@@ -1,6 +1,8 @@
-# 多看夜间 · Duokan Night
+# 小米阅读器第一代 · 多看阅读夜间模式（Duokan Night）
 
-为受支持的 EPD106 原生多看阅读器提供 **黑底白字**。独立辅助应用通过同签名 Instrumentation，在阅读进程内替换 E-Ink 配色接口。
+为 **小米阅读器第一代（MiReader / 小米多看电纸书）** 的原生 **多看阅读** 提供 **夜间模式 / 黑底白字**。当前实测设备标识为 EPD106 / virgo_perf1，兼容性以本文的固件与签名表为准。
+
+独立辅助应用通过同签名 Instrumentation，在阅读进程内替换 E-Ink 配色接口。搜索关键词：小米阅读器第一代、小米多看电纸书、MiReader、多看阅读、Duokan、墨水屏、夜间模式、黑底白字。
 
 辅助应用提供清晰的当前状态、三秒倒计时和自动打开多看。进入 EPUB / TXT 书籍后生效。
 
@@ -8,22 +10,29 @@
 
 ## 效果预览
 
-![多看夜间辅助应用](docs/images/helper.png)
+![小米阅读器第一代：多看阅读夜间模式辅助应用](docs/images/helper.png)
+
+点击按钮后，显示 **3 → 2 → 1**，再自动打开多看阅读：
+
+| 3 秒 | 2 秒 | 1 秒 |
+| --- | --- | --- |
+| ![多看阅读自动跳转倒计时 3 秒](docs/images/countdown-3.png) | ![多看阅读自动跳转倒计时 2 秒](docs/images/countdown-2.png) | ![多看阅读自动跳转倒计时 1 秒](docs/images/countdown-1.png) |
 
 | 默认日间 | 夜间模式 |
 | --- | --- |
 | ![日间原生阅读页渲染](docs/images/reading-day.png) | ![夜间原生阅读页渲染](docs/images/reading-night.png) |
 
-以上图片是实际设备中原生 View 的渲染截图；彩色色条用于确认图片未被反色。墨水屏实拍照片由项目维护者后续补充。
+辅助应用和倒计时图是实际设备截图；日夜阅读图是原生 View 的渲染截图，彩色色条用于确认图片未被反色。小米阅读器第一代的墨水屏实拍照片由项目维护者后续补充。
 
 ## 已验证设备
 
 | 项目 | 验证值 |
 | --- | --- |
-| 设备 | EPD106 / virgo_perf1 |
+| 产品名称 | 小米阅读器第一代 / 小米多看电纸书 / MiReader（维护者提供的产品名称） |
+| 实测设备标识 | EPD106 / virgo_perf1 |
 | Android | 8.1 / API 27 |
 | 固件 | 20231122-151132 |
-| 原生阅读器 | com.duokan.einkreader，1.2.7，versionCode 573231113 |
+| 原生阅读器 | 多看阅读（Duokan），com.duokan.einkreader，1.2.7，versionCode 573231113 |
 | 阅读进程 | com.duokan.einkreader:eink |
 | 签名证书 SHA-256 | c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8 |
 
@@ -70,4 +79,4 @@ python scripts/build.py --signing-key <本地pk8文件> --signing-cert <本地x5
 
 本仓库只包含原创辅助源码、构建/安装脚本、文档与展示截图。不包含原厂 APK、反编译源码/字节码、固件镜像、用户书籍、设备私有日志、序列号、账号令牌或签名文件。
 
-采用 [MIT License](LICENSE)。多看、EPD106 和 Android 等名称用于说明兼容对象；本项目由社区独立维护。
+采用 [MIT License](LICENSE)。小米阅读器、小米多看电纸书、多看阅读、MiReader、Duokan、EPD106 和 Android 等名称用于说明兼容对象；本项目由社区独立维护。
